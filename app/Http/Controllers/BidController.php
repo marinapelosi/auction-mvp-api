@@ -31,7 +31,6 @@ class BidController extends Controller
 
         try {
             $price = $validated['price'];
-            // Normaliza o valor do tipo antes de tentar convertê-lo para o enum
             $carType = CarType::from(strtolower(trim($validated['type'])));
             return response()->json(['priceAndFees' => (new PriceCalculatorMainService($price, $carType))->carPriceCalculator()]);
         } catch (\Exception $e) {
