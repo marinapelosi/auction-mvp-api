@@ -1,4 +1,13 @@
-# Bid Calculator
+# Bid Calculator API
+
+The Bid Calculator api was built using PHP Laravel framework. Please, follow the instructions to install it.
+
+## How the software api works
+
+![img_1.png](img_1.png)
+
+When the Endpoint is called, a Controller is invoked to validate the request data and pass to a Price Calculator Main Service. This Main Service call single responsibility Fee Calculators Services and after their response, sum the fees to the car base price.
+These are the values returned to the Controller and then to the API response.
 
 ##  How to setup?
 
